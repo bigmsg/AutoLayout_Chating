@@ -14,6 +14,12 @@
 		333C91E123666F1300B8D14E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333C91DF23666F1300B8D14E /* LaunchScreen.storyboard */; };
 		333C91EC23666F1300B8D14E /* AutoLayout_ChatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333C91EB23666F1300B8D14E /* AutoLayout_ChatingTests.swift */; };
 		333C91F723666F1300B8D14E /* AutoLayout_ChatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333C91F623666F1300B8D14E /* AutoLayout_ChatingUITests.swift */; };
+		333C920623666F8000B8D14E /* myBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 333C920423666F8000B8D14E /* myBubble@2x.png */; };
+		333C920723666F8000B8D14E /* yourBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 333C920523666F8000B8D14E /* yourBubble@2x.png */; };
+		333C920C236671E100B8D14E /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333C920A236671E100B8D14E /* MyCell.swift */; };
+		333C920D236671E100B8D14E /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333C920B236671E100B8D14E /* MyCell.xib */; };
+		333C921023667D8C00B8D14E /* YourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333C920E23667D8C00B8D14E /* YourCell.swift */; };
+		333C921123667D8C00B8D14E /* YourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333C920F23667D8C00B8D14E /* YourCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		333C91F223666F1300B8D14E /* AutoLayout_ChatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayout_ChatingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		333C91F623666F1300B8D14E /* AutoLayout_ChatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout_ChatingUITests.swift; sourceTree = "<group>"; };
 		333C91F823666F1300B8D14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333C920423666F8000B8D14E /* myBubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myBubble@2x.png"; path = "../../../Downloads/Lecture Image Resource/myBubble@2x.png"; sourceTree = "<group>"; };
+		333C920523666F8000B8D14E /* yourBubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yourBubble@2x.png"; path = "../../../Downloads/Lecture Image Resource/yourBubble@2x.png"; sourceTree = "<group>"; };
+		333C920A236671E100B8D14E /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		333C920B236671E100B8D14E /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		333C920E23667D8C00B8D14E /* YourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCell.swift; sourceTree = "<group>"; };
+		333C920F23667D8C00B8D14E /* YourCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,12 @@
 				333C91D623666F1200B8D14E /* AppDelegate.swift */,
 				333C91D823666F1200B8D14E /* ViewController.swift */,
 				333C91DA23666F1200B8D14E /* Main.storyboard */,
+				333C920E23667D8C00B8D14E /* YourCell.swift */,
+				333C920F23667D8C00B8D14E /* YourCell.xib */,
+				333C920A236671E100B8D14E /* MyCell.swift */,
+				333C920B236671E100B8D14E /* MyCell.xib */,
+				333C920423666F8000B8D14E /* myBubble@2x.png */,
+				333C920523666F8000B8D14E /* yourBubble@2x.png */,
 				333C91DD23666F1300B8D14E /* Assets.xcassets */,
 				333C91DF23666F1300B8D14E /* LaunchScreen.storyboard */,
 				333C91E223666F1300B8D14E /* Info.plist */,
@@ -230,7 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				333C91E123666F1300B8D14E /* LaunchScreen.storyboard in Resources */,
+				333C920723666F8000B8D14E /* yourBubble@2x.png in Resources */,
 				333C91DE23666F1300B8D14E /* Assets.xcassets in Resources */,
+				333C920623666F8000B8D14E /* myBubble@2x.png in Resources */,
+				333C921123667D8C00B8D14E /* YourCell.xib in Resources */,
+				333C920D236671E100B8D14E /* MyCell.xib in Resources */,
 				333C91DC23666F1200B8D14E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333C921023667D8C00B8D14E /* YourCell.swift in Sources */,
+				333C920C236671E100B8D14E /* MyCell.swift in Sources */,
 				333C91D923666F1200B8D14E /* ViewController.swift in Sources */,
 				333C91D723666F1200B8D14E /* AppDelegate.swift in Sources */,
 			);

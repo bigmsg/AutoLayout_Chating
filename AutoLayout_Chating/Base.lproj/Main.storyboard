@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,72 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout_Chating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3G-0t-X2E">
+                                <rect key="frame" x="0.0" y="20" width="375" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TA6-6B-95k">
+                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ckt-Cr-nBz">
+                                        <rect key="frame" x="4" y="4" width="297" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FyE-u5-AJm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-HN-m2J">
+                                        <rect key="frame" x="305" y="0.0" width="66" height="48"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" title="전송"/>
+                                        <connections>
+                                            <action selector="sendString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qY6-1h-dhh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lqc-HN-m2J" secondAttribute="bottom" constant="4" id="9LP-Bv-VAg"/>
+                                    <constraint firstAttribute="trailing" secondItem="lqc-HN-m2J" secondAttribute="trailing" id="CbQ-I5-RDc"/>
+                                    <constraint firstItem="ckt-Cr-nBz" firstAttribute="top" secondItem="TA6-6B-95k" secondAttribute="top" constant="4" id="CnG-Ji-SU8"/>
+                                    <constraint firstItem="lqc-HN-m2J" firstAttribute="top" secondItem="TA6-6B-95k" secondAttribute="top" constant="4" id="W9b-k7-O6R"/>
+                                    <constraint firstItem="lqc-HN-m2J" firstAttribute="top" secondItem="TA6-6B-95k" secondAttribute="top" id="cgC-69-1xZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ckt-Cr-nBz" secondAttribute="bottom" constant="4" id="dXm-ul-tpg"/>
+                                    <constraint firstItem="lqc-HN-m2J" firstAttribute="leading" secondItem="ckt-Cr-nBz" secondAttribute="trailing" constant="4" id="gb8-9a-y7H"/>
+                                    <constraint firstItem="ckt-Cr-nBz" firstAttribute="leading" secondItem="TA6-6B-95k" secondAttribute="leading" constant="4" id="jmd-U1-hd1"/>
+                                    <constraint firstAttribute="trailing" secondItem="lqc-HN-m2J" secondAttribute="trailing" constant="4" id="yJC-Tb-pYK"/>
+                                    <constraint firstAttribute="bottom" secondItem="lqc-HN-m2J" secondAttribute="bottom" id="ykg-mb-yLs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TA6-6B-95k" secondAttribute="trailing" id="2hW-Wx-nrW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TA6-6B-95k" secondAttribute="bottom" id="Haa-1c-7li"/>
+                            <constraint firstItem="TA6-6B-95k" firstAttribute="top" secondItem="e3G-0t-X2E" secondAttribute="bottom" id="LH6-T3-u1v"/>
+                            <constraint firstItem="e3G-0t-X2E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h9x-yL-jTN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e3G-0t-X2E" secondAttribute="trailing" id="sGV-af-fpy"/>
+                            <constraint firstItem="e3G-0t-X2E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sK0-P1-Zpm"/>
+                            <constraint firstItem="TA6-6B-95k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u2y-82-WZ6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="chatTableView" destination="e3G-0t-X2E" id="972-Yd-ntH"/>
+                        <outlet property="inputTextView" destination="ckt-Cr-nBz" id="Pbk-4b-Ylv"/>
+                        <outlet property="inputViewBottomMargin" destination="Haa-1c-7li" id="rXL-bz-jNl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
