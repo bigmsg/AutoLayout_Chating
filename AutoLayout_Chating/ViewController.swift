@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
 
     
 
@@ -22,7 +22,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
     }
 
-    @IBOutlet weak var inputTextView: UITextView!
+    @IBOutlet weak var inputTextView: UITextView! {
+        didSet {
+            inputTextView.delegate = self
+        }
+    }
+    
+    @IBOutlet weak var inputTextViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var inputViewBottomMargin: NSLayoutConstraint!
     
@@ -83,14 +89,16 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         if indexPath.row % 2 == 0 {
             let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCell
-            myCell.myTextView.text = chatDatas[indexPath.row]
             
+            myCell.myTextView.text = chatDatas[indexPath.row]
+            myCell.selectionStyle = .none
             return myCell
             
         } else {
             let yourCell = tableView.dequeueReusableCell(withIdentifier: "yourCell", for: indexPath) as! YourCell
             
             yourCell.yourTextView.text = chatDatas[indexPath.row]
+            yourCell.selectionStyle = .none
             
             return yourCell
             
@@ -112,6 +120,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         chatTableView.insertRows(at: [lastIndexPath], with: UITableView.RowAnimation.automatic)
         
         
+        // 메시지창 기본 높이 설정
+        inputTextViewHeight.constant = 40
         
         // 메시지 전송시
         // 메시지가 키보드에 가려지는 현상 해결
@@ -119,7 +129,16 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
     }
     
-    
+    func textViewDidChange(_ textView: UITextView) {
+        //inputTextViewHeight.constant = textView.contentSize.height
+        if textView.contentSize.height <= 40 {
+            inputTextViewHeight.constant = 40
+        } else if textView.contentSize.height >= 100 {
+            inputTextViewHeight.constant = 100
+        } else {
+            inputTextViewHeight.constant = textView.contentSize.height
+        }
+    }
     
 }
 

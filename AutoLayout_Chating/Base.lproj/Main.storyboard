@@ -35,7 +35,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-HN-m2J">
-                                        <rect key="frame" x="305" y="0.0" width="66" height="48"/>
+                                        <rect key="frame" x="305" y="4" width="66" height="40"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         <state key="normal" title="전송"/>
                                         <connections>
@@ -46,15 +46,12 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="lqc-HN-m2J" secondAttribute="bottom" constant="4" id="9LP-Bv-VAg"/>
-                                    <constraint firstAttribute="trailing" secondItem="lqc-HN-m2J" secondAttribute="trailing" id="CbQ-I5-RDc"/>
                                     <constraint firstItem="ckt-Cr-nBz" firstAttribute="top" secondItem="TA6-6B-95k" secondAttribute="top" constant="4" id="CnG-Ji-SU8"/>
                                     <constraint firstItem="lqc-HN-m2J" firstAttribute="top" secondItem="TA6-6B-95k" secondAttribute="top" constant="4" id="W9b-k7-O6R"/>
-                                    <constraint firstItem="lqc-HN-m2J" firstAttribute="top" secondItem="TA6-6B-95k" secondAttribute="top" id="cgC-69-1xZ"/>
                                     <constraint firstAttribute="bottom" secondItem="ckt-Cr-nBz" secondAttribute="bottom" constant="4" id="dXm-ul-tpg"/>
                                     <constraint firstItem="lqc-HN-m2J" firstAttribute="leading" secondItem="ckt-Cr-nBz" secondAttribute="trailing" constant="4" id="gb8-9a-y7H"/>
                                     <constraint firstItem="ckt-Cr-nBz" firstAttribute="leading" secondItem="TA6-6B-95k" secondAttribute="leading" constant="4" id="jmd-U1-hd1"/>
                                     <constraint firstAttribute="trailing" secondItem="lqc-HN-m2J" secondAttribute="trailing" constant="4" id="yJC-Tb-pYK"/>
-                                    <constraint firstAttribute="bottom" secondItem="lqc-HN-m2J" secondAttribute="bottom" id="ykg-mb-yLs"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -73,6 +70,7 @@
                     <connections>
                         <outlet property="chatTableView" destination="e3G-0t-X2E" id="972-Yd-ntH"/>
                         <outlet property="inputTextView" destination="ckt-Cr-nBz" id="Pbk-4b-Ylv"/>
+                        <outlet property="inputTextViewHeight" destination="FyE-u5-AJm" id="jj7-JO-tHT"/>
                         <outlet property="inputViewBottomMargin" destination="Haa-1c-7li" id="rXL-bz-jNl"/>
                     </connections>
                 </viewController>
